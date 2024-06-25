@@ -1,5 +1,7 @@
 import Link from "next/link";
 import styles from "@/styles/LinkButton.module.sass";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function LinkButton(props: any) {
   return (
@@ -18,7 +20,12 @@ export default function LinkButton(props: any) {
         props.variant === "block" && styles["link-block"]
       }`}
     >
-      {props.children}
+      {props.variant === "block" && (
+        <span className={styles.arrow} style={{ zIndex: 4 }}>
+          <FontAwesomeIcon icon={faArrowRight} width={"20px"} />
+        </span>
+      )}
+      <h5 style={{ zIndex: 5 }}>{props.children}</h5>
     </Link>
   );
 }

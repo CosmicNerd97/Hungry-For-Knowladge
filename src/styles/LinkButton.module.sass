@@ -4,7 +4,7 @@
     font-weight: bold
     &:hover
         cursor: pointer
-        color: #008CEA
+        color: var(--blue)
 
 
 .link-block
@@ -28,12 +28,28 @@
     //Animate before arrow
     &:hover
         cursor: pointer
-        color: #008CEA
+        color: var(--blue)
         background: transparent
-        border-color: #008CEA
-    &::before
-        content: "→"
-        font-size: 20px
-        margin-right: 10px
-        right: 10px
-        transition: transform 0.5s
+        border-color: var(--blue)
+        .arrow
+            animation: arrow 1s ease-in-out 
+
+
+.arrow
+    margin-right: 10px
+    transition: 0.1s
+
+
+@keyframes arrow
+    0%
+        transform: translateX(0)
+    50%
+        transform: translateX(50px)
+        opacity: 0
+    65%
+        transform: translateX(-100px)
+    70%
+        transform: translateX(-20px)
+        opacity: 1
+    100%
+        transform: translateX(0)
