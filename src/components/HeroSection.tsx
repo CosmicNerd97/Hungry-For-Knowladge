@@ -7,7 +7,7 @@ export default function HeroSection() {
         src={"https://placehold.co/1400x400/png"}
         width={1400}
         height={200}
-        style={{ width: "100%" }}
+        style={{ width: "100%", position: "absolute", zIndex: "-10" }}
       />
     </section>
   );
