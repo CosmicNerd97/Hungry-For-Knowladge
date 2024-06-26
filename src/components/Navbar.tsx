@@ -1,6 +1,7 @@
 import styles from "@/styles/Navbar.module.sass";
 import { Box, Typography } from "@mui/material";
 import LinkButton from "./LinkButton";
+import Link from "next/link";
 export default function Navbar() {
   return (
     <nav className={styles.navbar}>
@@ -10,7 +11,7 @@ export default function Navbar() {
         color={"white"}
         variant="h5"
       >
-        Hungry-For-Knowladge
+        <Link href="/">Hungry-For-Knowladge</Link>
       </Typography>
       <Box
         sx={{

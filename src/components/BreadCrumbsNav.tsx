@@ -15,8 +15,6 @@ export default function BreadCrumbs() {
   segments
     .filter((segment) => segment !== "")
     .map((segment) => UppercaseSagments.push(segment.replace("/", "")));
-
-  console.log(UppercaseSagments);
   return (
     <>
       <ul className={styles["bread"]}>
@@ -29,7 +27,7 @@ export default function BreadCrumbs() {
                   UppercaseSagments.indexOf(segment) + 1
                 ).join("/")}`}
               >
-                {segment}
+                {segment.charAt(0).toUpperCase() + segment.slice(1)}
               </Link>
             </li>
             <li className={styles["slash"]}>
