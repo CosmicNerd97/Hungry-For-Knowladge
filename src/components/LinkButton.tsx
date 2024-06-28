@@ -8,7 +8,10 @@ export default function LinkButton(props: any) {
     <Link
       style={
         props.variant === "block"
-          ? {}
+          ? {
+              width: props.width || "",
+              borderColor: props.borderColor || "",
+            }
           : {
               textDecoration: "none",
               height: "fit-content",

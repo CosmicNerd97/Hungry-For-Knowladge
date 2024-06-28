@@ -23,7 +23,7 @@ export default function Navbar() {
         <LinkButton href="/login">Login</LinkButton>
         <LinkButton
           style={{ fontSize: "20px", color: "white" }}
-          href="/sign up"
+          href="/signup"
           variant="block"
         >
           Get Started
