@@ -5,3 +5,7 @@
 :root {
   --blue: #008cea;
 }
+
+html {
+  scroll-behavior: smooth;
+}

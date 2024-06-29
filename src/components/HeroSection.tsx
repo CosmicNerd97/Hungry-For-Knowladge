@@ -3,7 +3,9 @@ import Hero from "../../public/images/Hero.jpeg";
 import style from "@/styles/HeroSection.module.sass";
 import { Box, Typography } from "@mui/material";
 import LinkButton from "./LinkButton";
-import { width } from "@fortawesome/free-brands-svg-icons/fa42Group";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function HeroSection() {
   return (
@@ -61,6 +63,20 @@ export default function HeroSection() {
         >
           Get Started
         </LinkButton>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          gap: "50px",
+          position: "absolute",
+          bottom: "0px",
+          width: "calc(100% - 160px)",
+        }}
+      >
+        <Link style={{ margin: "0 auto 0 auto" }} href="#payments">
+          <FontAwesomeIcon icon={faAngleDown} width={"80px"} />
+        </Link>
       </Box>
     </section>
   );
